@@ -7,8 +7,8 @@ from cota_app_interface import *
 location_df =  pd.read_json('query_results.json')
 trips = location_df['vehicle']
 
-st.write(trips)
 
+#pull lists to be put into DataFrame
 lat_list = []
 long_list = []
 route_id_list = []
