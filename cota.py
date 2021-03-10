@@ -8,7 +8,7 @@ location_df =  pd.read_json('query_results.json')
 trips = location_df['vehicle']
 
 
-#pull lists to be put into DataFrame
+#lists to be put into DataFrame
 lat_list = []
 long_list = []
 route_id_list = []
@@ -27,7 +27,7 @@ def get_locations(trips):
             'latitude' : lat_list,
             'longitude': long_list
         })
-
+    #Create map on webpage
     st.map(location_df)
       
 
@@ -35,7 +35,7 @@ def get_locations(trips):
 get_locations(trips)
 
 
-#Create map on webpage
+
 
 
 
