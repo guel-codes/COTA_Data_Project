@@ -1,18 +1,21 @@
 import streamlit as st
 import numpy as np 
 import pandas as pd
+from cota_app_interface import *
 
-# Setting up page.
-st.title('COTA Live Update App')
-st.write('This app will ingest streamed data from the Smart Columbus website and show real-time COTA bus locations.')
-st.subheader('Vehicle Series from Location DataFrame')
 
 location_df =  pd.read_json('query_results.json')
 trips = location_df['vehicle']
 
+def get_locations(trips):
+    for trip in trips:
+        lat = trip['position']['latitude']
+        long = trip['position']['longitude']
+        location = lat,long
+        
+        st.write(location)
 
-
-st.write(trips)
+get_locations(trips)
 
 
 #Create map on webpage
