@@ -9,9 +9,10 @@ trips = location_df['vehicle']
 
 
 #lists to be put into DataFrame
+route_id_list = []
 lat_list = []
 long_list = []
-route_id_list = []
+
 
 def get_locations(trips):
     for trip in trips:
@@ -22,11 +23,12 @@ def get_locations(trips):
         long = float(trip['position']['longitude'])
         long_list.append(long)
         
-        location_df = pd.DataFrame({
-            'route_id' : route_id_list,
-            'latitude' : lat_list,
-            'longitude': long_list
-        })
+    location_df = pd.DataFrame({
+        'route_id' : route_id_list,
+        'latitude' : lat_list,
+        'longitude': long_list
+    })
+    
     #Create map on webpage
     st.map(location_df)
       
