@@ -29,9 +29,10 @@ def get_locations(trips):
         'longitude': long_list
     })
     
-    #Create map on webpage
+    
     st.map(location_df)
       
+
 
 
 get_locations(trips)
