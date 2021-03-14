@@ -1,5 +1,12 @@
 # COTA_Data_Project
-Use websocket to stream live COTA data to GIS/Google Map. 
+## Overview:
+- This app will use websocket to stream live COTA data to GIS/Google Map. 
 
-Streamlit webapp found at: http://localhost:8501/
-Need to go to file path location where files are stored and use command 'streamlit run ['file_name']'
+#
+
+
+## How to Run Locally
+1) Download files locally to a directory.
+2) Go to that directory in your terminal and use command 'streamlit run cota.py'. This should open a web-browser tab display the app in it's current state. 
+ 
+
