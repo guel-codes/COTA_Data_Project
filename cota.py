@@ -14,7 +14,7 @@ lat_list = []
 long_list = []
 
 
-def get_locations(trips):
+def map_bus_locations(trips):
     for trip in trips:
         route_id = trip['trip']['route_id']
         route_id_list.append(route_id)
@@ -23,19 +23,21 @@ def get_locations(trips):
         long = float(trip['position']['longitude'])
         long_list.append(long)
         
-    location_df = pd.DataFrame({
+
+        new_location_df = pd.DataFrame({
         'route_id' : route_id_list,
         'latitude' : lat_list,
         'longitude': long_list
-    })
+    })  
     
+    return st.map(new_location_df)
+
+
     
-    st.map(location_df)
-      
 
 
 
-get_locations(trips)
+map_bus_locations(trips)
 
 
 
