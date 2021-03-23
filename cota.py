@@ -28,7 +28,7 @@ def map_bus_locations(trips):
         'route_id' : route_id_list,
         'latitude' : lat_list,
         'longitude': long_list
-    })  
+        })  
     
     return st.map(new_location_df)
 
