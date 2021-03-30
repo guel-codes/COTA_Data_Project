@@ -1,7 +1,12 @@
 import streamlit as st
 import numpy as np 
 import pandas as pd
-from cota_app_interface import *
+
+
+st.title('COTA Live Update App')
+st.write('This app will use streamed data from the Smart Columbus website and show real-time COTA bus locations.')
+st.subheader('Bus Locations')
+
 
 
 location_df =  pd.read_json('query_results.json')
