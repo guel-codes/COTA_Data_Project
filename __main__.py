@@ -48,9 +48,3 @@ map_bus_locations(trips)
 
 
 
-
-
-
-
-
-
