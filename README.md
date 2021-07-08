@@ -1,8 +1,8 @@
 # COTA_Data_Project
 ## Overview:
-- This app will use websocket to stream live COTA data to GIS/Google Map. 
+- This app will use websocket to stream live COTA data to mapping visualization. 
 
-#
+
 
 
 ## How to Run Locally
